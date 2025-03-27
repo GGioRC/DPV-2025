@@ -895,7 +895,7 @@ GameObject:
   - component: {fileID: 1611734799}
   - component: {fileID: 1611734798}
   - component: {fileID: 1611734803}
-  - component: {fileID: 1611734804}
+  - component: {fileID: 1611734806}
   - component: {fileID: 1611734802}
   - component: {fileID: 1611734801}
   - component: {fileID: 1611734800}
@@ -1078,7 +1078,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 2.0184593
+  m_Mass: 0.66
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
@@ -1093,8 +1093,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &1611734804
-CapsuleCollider2D:
+--- !u!114 &1611734805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611734797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529acec08bab1784ab151cd30021a53b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <CapaPiso>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 64
+  <PosicionRayo>k__BackingField: {x: 0.3, y: 0.8}
+  <DistanciaRayo>k__BackingField: 0.1
+  <FuerzaSalto>k__BackingField: 5
+--- !u!61 &1611734806
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1127,27 +1145,18 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.6, y: 1.6}
-  m_Direction: 0
---- !u!114 &1611734805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611734797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 529acec08bab1784ab151cd30021a53b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <CapaPiso>k__BackingField:
-    serializedVersion: 2
-    m_Bits: 64
-  <PosicionRayo>k__BackingField: {x: 0.25, y: 0.8}
-  <DistanciaRayo>k__BackingField: 0.1
-  <FuerzaSalto>k__BackingField: 10
+  m_Offset: {x: 0, y: -0.25}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.6, y: 1.6}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.6, y: 1.1}
+  m_EdgeRadius: 0
 --- !u!1 &1853531656
 GameObject:
   m_ObjectHideFlags: 0
