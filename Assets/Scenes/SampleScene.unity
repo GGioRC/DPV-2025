@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 913272546}
   - component: {fileID: 913272545}
   - component: {fileID: 913272547}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -899,6 +899,7 @@ GameObject:
   - component: {fileID: 1611734802}
   - component: {fileID: 1611734801}
   - component: {fileID: 1611734800}
+  - component: {fileID: 1611734805}
   m_Layer: 0
   m_Name: Idle (32x32)_0
   m_TagString: Untagged
@@ -1002,6 +1003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movimientoX: {fileID: 1611734800}
+  movimientoY: {fileID: 1611734805}
 --- !u!114 &1611734802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,8 +1045,24 @@ MonoBehaviour:
         m_CallState: 1
     m_ActionId: 878cf418-430d-4457-96cb-8422f865f7e7
     m_ActionName: 'Jugador/Mover[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1611734801}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Saltar
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 39960d8c-52bb-459c-b329-5570a08399b6
+    m_ActionName: 'Jugador/Saltar[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard-Mouse
+  m_DefaultControlScheme: Keyboard
   m_DefaultActionMap: Jugador
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 519420031}
@@ -1112,6 +1130,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.6, y: 1.6}
   m_Direction: 0
+--- !u!114 &1611734805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611734797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529acec08bab1784ab151cd30021a53b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <CapaPiso>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 64
+  <PosicionRayo>k__BackingField: {x: 0.25, y: 0.8}
+  <DistanciaRayo>k__BackingField: 0.1
+  <FuerzaSalto>k__BackingField: 10
 --- !u!1 &1853531656
 GameObject:
   m_ObjectHideFlags: 0
