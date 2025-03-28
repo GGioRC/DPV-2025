@@ -6,8 +6,8 @@ public class MovimientoX : MonoBehaviour
     Rigidbody2D Rigidbody { get; set; }
 
     [field: SerializeField] float VelocidadMaxima { get; set; }
-    float VelocidadActual { get; set; }
-    float DireccionX { get; set; }
+    [field: SerializeField] float VelocidadActual { get; set; }
+    [field: SerializeField] float DireccionX { get; set; }
 
     void Awake() => Rigidbody = GetComponent<Rigidbody2D>();
 
